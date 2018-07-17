@@ -3,7 +3,7 @@
 FROM cyrilix/openzwave
 LABEL MAINTAINER Cyrille Nofficial  "cynoffic@cyrilix.fr"
 
-ENV VERSION=3.8153
+ENV VERSION=9700
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
@@ -21,7 +21,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q build
                     python3-pip \
                     libxslt-dev \
                     lib32z1-dev \
-                    libboost-python1.55-dev \
+                    libboost-python-dev \
                     wget \
                     && apt-get clean \
                     && rm -rf /tmp/* /var/tmp/*  \
